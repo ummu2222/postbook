@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "postbook",
+  "main": "App.js",
+  "scripts": {
+    "start": "node App.js",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false yarn add --prefix client && yarn run build --prefix client"
+  },
+  "author": "umang_us",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.1"
+  }
+}
