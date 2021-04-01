@@ -8,10 +8,11 @@ const jwt = require('jsonwebtoken');
 const {JWT_SECRET} = require('../config/keys');
 const requireLogin = require('../middleware/requireLogin');
 
+/*
 router.get('/',(req,res)=>{
     res.send("hello");
 });
-
+*/
 // creating middleware to verify token
 // run only when user logged in
 

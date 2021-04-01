@@ -34,7 +34,7 @@ const Routing = () =>{
   return(
     <Switch>
        <Route exact path="/" >
-          <Home />
+          <Homex />
         </Route>
         <Route path="/login" >
           <Login />
