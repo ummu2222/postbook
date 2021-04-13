@@ -8,8 +8,14 @@ const jwt = require('jsonwebtoken');
 const {JWT_SECRET} = require('../config/keys');
 const requireLogin = require('../middleware/requireLogin');
 
+
+
+// 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  (sendgrid key)
+
 // creating middleware to verify token
 // run only when user logged in
+
+
 
 
 router.post('/signup',(req,res)=>{
@@ -79,7 +85,9 @@ router.post('/login',(req,res)=>{
             console.log(err);
         })
 
-    }).catch(  );
+    }).catch( err=>{
+        console.log(err);
+    });
 
 
 });

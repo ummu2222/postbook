@@ -15,7 +15,7 @@ const Home = () => {
             }
         }).then(res =>res.json())
         .then(result => {
-            console.log(result);
+    //        console.log(result);
             setData(result.posts);
         })
 
@@ -117,7 +117,7 @@ const Home = () => {
             }
         }).then(res=>res.json())
         .then(result=>{
-            console.log(result);
+       //     console.log(result);
              
             const newData = data.filter(item =>{
                 return item._id !== result._id;
@@ -140,7 +140,7 @@ const Home = () => {
         }).then(res=>res.json())
         .then(result =>{
 
-            console.log(result);
+        //    console.log(result);
             const newData = data.map(item =>{
                 if(item._id === result._id)
                 {
@@ -150,6 +150,7 @@ const Home = () => {
                     return item;
                 }
             });
+         //   console.log(newData);
             setData(newData);
         }).catch(err=>{
             console.log(err);
@@ -163,7 +164,7 @@ const Home = () => {
                 data.map((item) => {
                     return(
                         <div className="card home-card" key={item._id} >
-                        <h5 style={{padding:"5px"}}><Link to={ item.postedBy._id === state._id ? `/profile` : `/profile/${item.postedBy._id}`}>{item.postedBy.name}</Link> {item.postedBy._id === state._id && <i className="material-icons" onClick={()=>deletePost(item._id)} style={{float:"right"}}>delete</i>}</h5>
+                        <h5 style={{padding:"5px"}}><Link to={ item.postedBy._id === state._id ? `/profile` : `/profile/${item.postedBy._id}`}><img src={item.postedBy.pic} alt="profile" className="circle" style={{height:"30px",width:"30px"}}/>{" "}{item.postedBy.name}</Link> {item.postedBy._id === state._id && <i className="material-icons" onClick={()=>deletePost(item._id)} style={{float:"right"}}>delete</i>}</h5>
                         <div className="card-image">
                             <img
                                 src={item.photo}
