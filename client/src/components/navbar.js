@@ -69,6 +69,7 @@ const NavBar = () => {
             <div id="modal1" className="modal" ref={searchModal} style={{ color: 'black' }} >
                 <div className="modal-content">
                     <input
+                        style={{color:"black"}}
                         type="text"
                         placeholder="search user"
                         value={search}

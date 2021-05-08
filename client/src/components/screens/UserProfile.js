@@ -137,7 +137,7 @@ const UserProfile = () =>{
                 }
                
             </div>
-        </div>) :<h2>Loading...</h2>}
+        </div>) :<h2 style={{color:"white"}}>Loading...</h2>}
         </>
     );
 

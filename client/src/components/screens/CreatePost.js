@@ -64,7 +64,7 @@ const CreatePost = () => {
     }
 
     return (
-        <div className="card input-field"  style={{margin:"100px auto",maxWidth:"700px",padding:"20px",textAlign:"center",backgroundColor:" rgb(253, 253, 255)"}} >
+        <div className="card input-field"  style={{margin:"100px auto",maxWidth:"700px",padding:"20px",textAlign:"center",backgroundColor:"transparent"}} >
             <input
                 type="text"
                 placeholder="title"
